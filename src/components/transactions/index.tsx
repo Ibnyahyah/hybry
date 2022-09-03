@@ -24,7 +24,7 @@ function HbarTransaction() {
   setInterval(() => {
     getAvailableBlocks();
     getAvailableTransactions();
-  }, 10000);
+  }, 30000);
   React.useEffect(() => {
     getAvailableBlocks();
     getAvailableTransactions();
