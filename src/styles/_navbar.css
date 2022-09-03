@@ -1,0 +1,15 @@
+.nav__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.nav__bar .site__title {
+  font-size: 24px;
+}
+
+.nav__bar ul li {
+  display: inline;
+  margin-left: 20px;
+}

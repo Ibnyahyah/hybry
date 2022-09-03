@@ -1,0 +1,81 @@
+.transaction__page {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.transaction__page h1 {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.transaction__page h2 {
+  font-weight: 500;
+}
+
+.transaction__page .___header span {
+  color: var(--accents);
+}
+
+.transaction__page .page__card {
+  background-color: var(--primary);
+  color: #000;
+  border-radius: var(--width);
+}
+
+.transaction__page .page__card__header {
+  border-bottom: 1px solid gray;
+}
+
+.transaction__page .page__card__header h2 {
+  padding: var(--padding);
+}
+
+.transaction__page .block__details {
+  display: flex;
+  overflow: auto;
+}
+
+.transaction__page table {
+  padding: var(--padding);
+  width: 100%;
+}
+
+.name__s td {
+  padding: 10px;
+  background-color: lightgrey;
+  border-radius: var(--width);
+  /* height: 100vh; */
+}
+
+.transaction__page table tr td:first-child {
+  width: 100px;
+}
+
+.transaction__page .hashed {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.transaction__page .transactions__transfer {
+  margin-bottom: 10px;
+}
+
+.transaction__page .transactions__transfer .account__transfer span {
+  color: var(--accents);
+  font-weight: 600;
+}
+
+.transaction__page .transactions__transfer .account__amount span {
+  color: var(--secondary);
+}
+
+.transaction__page .transactions__transfer .approved__transfer.true {
+  margin-left: 10px;
+}
+
+.transaction__page .transactions__transfer .approved__transfer.false {
+  color: red;
+  margin-left: 10px;
+}
