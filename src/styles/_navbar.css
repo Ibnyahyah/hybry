@@ -6,16 +6,18 @@
 
 .navbg {
   background-color: var(--primary);
-  color: var(--secondary);
   padding: 0.8em;
   border-radius: 0.4em;
+}
+
+.navbg a {
+  color: var(--secondary);
 }
 
 .nav__bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-top: 15px;s */
   position: relative;
 }
 
@@ -30,6 +32,8 @@
 
 .nav__bar .site__title {
   font-size: 24px;
+  font-weight: 600;
+  font-family: monospace;
 }
 
 .nav__bar ul li {

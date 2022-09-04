@@ -84,6 +84,10 @@
   row-gap: 30px;
 }
 
+.transaction__page.pages .transaction__blocks {
+  width: 100%;
+}
+
 .transaction__blocks {
   width: 48%;
   background-color: var(--primary);

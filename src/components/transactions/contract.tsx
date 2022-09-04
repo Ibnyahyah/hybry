@@ -17,7 +17,7 @@ function Contracts({ contracts }: Props) {
             <div>
               <div className="df__jb">
                 <span className="trans">CRT</span>
-                <Link to={`/transaction/${data.contract_id}`}>
+                <Link to={`/contract/${data.contract_id}`}>
                   <p className="hash_tnx">{data.contract_id}</p>
                 </Link>
               </div>

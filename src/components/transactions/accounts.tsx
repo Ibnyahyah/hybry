@@ -16,7 +16,7 @@ function Accounts({ accounts }: Props) {
           <div className="df__jb" key={data.account}>
             <div>
               <div className="df__jb">
-                <span className="trans">AcId</span>
+                <span className="trans">AcID</span>
                 <Link to={`/account/${data.account}`}>
                   <p className="hash_tnx">{data.account}</p>
                 </Link>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menu, setMenu] = React.useState<boolean>(false);
@@ -19,17 +20,31 @@ function Navbar() {
   return (
     <div className={`container nav ${bg}`}>
       <nav className="nav__bar">
-        <header className="site__title">HyBry</header>
+        <Link to="/">
+          <header className="site__title">HyBryFoundation</header>
+        </Link>
         <button className="menu" onClick={() => setMenu((prev) => !prev)}>
           |||
         </button>
         <ul className={menu ? "active" : ""}>
-          <li>Home</li>
-          <li>Blocks</li>
-          <li>Transactions</li>
-          <li>Accounts</li>
-          <li>Contracts</li>
-          <li>More</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/blocks">Blocks</Link>
+          </li>
+          <li>
+            <Link to="/transactions">Transactions</Link>
+          </li>
+          <li>
+            <Link to="/accounts">Accounts</Link>
+          </li>
+          <li>
+            <Link to="/contracts">Contracts</Link>
+          </li>
+          <li>
+            <Link to="#">More</Link>
+          </li>
         </ul>
       </nav>
     </div>

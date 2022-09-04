@@ -1,11 +1,12 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Seacrh from "../components/seacrh";
+import { Contract } from "../models";
 
-function TransactionsPage(): JSX.Element {
+function ContractsPage(): JSX.Element {
   const params = useParams<string>();
   const [loading, setLoading] = React.useState<boolean>(false);
-  const [transactions, setTransactions] = React.useState<[]>([]);
+  const [contracts, setContracts] = React.useState<Contract[]>([]);
 
   const [limit, setLimit] = React.useState<number>(10000);
 
@@ -23,10 +24,10 @@ function TransactionsPage(): JSX.Element {
   const getAvailableBlocks = async () => {
     setLoading(true);
     await fetch(
-      `https://mainnet-public.mirrornode.hedera.com/api/v1/transactions?limit=${limit}`
+      `https://mainnet-public.mirrornode.hedera.com/api/v1/contracts?limit=${limit}`
     )
       .then((response) => response.json())
-      .then((data) => setTransactions(data.transactions))
+      .then((data) => setContracts(data.contracts))
       .catch((error) => console.log(error));
     setLoading(false);
   };
@@ -42,7 +43,7 @@ function TransactionsPage(): JSX.Element {
   ) : (
     <div className="container transaction__page pages">
       <div className="row">
-        <h1 className="___header">Transactions</h1>
+        <h1 className="___header">Contracts</h1>
         <div className="search__wrapper">
           <Seacrh placeholder="Search for Account using acountID" />
         </div>
@@ -50,42 +51,44 @@ function TransactionsPage(): JSX.Element {
 
       <div className="transaction__blocks">
         <div className="transaction__block__header">
-          <h1>Lastest Transactions</h1>
+          <h1>Lastest Contracts</h1>
         </div>
         <div className="transaction__block blocks">
-          {transactions.map((data) => (
-            <div className="df__jb" key={data["transaction_hash"]}>
+          {contracts.map((data) => (
+            <div className="df__jb" key={data.contract_id}>
               <div>
                 <div className="df__jb">
-                  <span className="trans">TxId</span>
-                  <Link to={`/transaction/${data["transaction_id"]}`}>
-                    <p className="hash_tnx">{data["transaction_id"]}</p>
+                  <span className="trans">CRT</span>
+                  <Link to={`/contract/${data.contract_id}`}>
+                    <p className="hash_tnx">{data.contract_id}</p>
                   </Link>
                 </div>
-                <span>vs:{data["valid_duration_seconds"]}secs</span>
+                <span>
+                  Auto Renew Account:{" "}
+                  <span style={{ color: "seagreen" }}>
+                    {data.auto_renew_account}
+                  </span>
+                </span>
               </div>
               <div className="transfer">
-                Transfers:
-                <div className="df__jb">
-                  {(data["transfers"] as never[]).map((account) => (
-                    <p key={account["account"]}>{account["account"]}</p>
-                  ))}
-                </div>
+                EVM Address:{" "}
+                <span className="hash_tnx">{data.evm_address}</span>
               </div>
               <div>
                 <p>
-                  Result:
+                  Created Timestamp:{" "}
                   <span
                     style={{
                       textTransform: "lowercase",
                       color: "black",
-                      marginLeft: "2px",
                     }}
                   >
-                    {data["result"]}
+                    {data.created_timestamp}
                   </span>
                 </p>
-                <p className="fee">Fee: {data["charged_tx_fee"]}</p>
+                <p className="fee">
+                  Deleted: {data.deleted ? "True" : "False"}
+                </p>
               </div>
             </div>
           ))}
@@ -95,4 +98,4 @@ function TransactionsPage(): JSX.Element {
   );
 }
 
-export default TransactionsPage;
+export default ContractsPage;

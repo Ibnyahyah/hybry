@@ -1,4 +1,4 @@
-import { Transaction } from "../pages/transactions_page";
+import { Transaction } from "../pages/transaction_page";
 
 export interface Account {
   account: string;
@@ -39,6 +39,7 @@ export interface Block {
 
 export interface Contract {
   admin_key: unknown;
+  bytecode: string;
   auto_renew_account: string;
   auto_renew_period: number;
   contract_id: string;
