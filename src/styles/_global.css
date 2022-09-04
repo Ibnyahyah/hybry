@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -22,6 +23,39 @@
 a {
   text-decoration: none;
 }
+
 li {
   list-style: none;
+}
+
+
+/* loading__container */
+.loading__container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading__container .loading__spiner {
+  border-width: 5px;
+  border-style: solid;
+  border-top-color: orangered;
+  border-right-color: blue;
+  border-left-color: red;
+  border-bottom-color: orange;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: loading_sniper .5s linear infinite;
+}
+
+@keyframes loading_sniper {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

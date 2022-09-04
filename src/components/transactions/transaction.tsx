@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -6,7 +5,6 @@ type Props = {
 };
 
 function Transactions({ transactions }: Props) {
-  console.log(transactions);
   return (
     <div className="transaction__blocks">
       <div className="transaction__block__header">

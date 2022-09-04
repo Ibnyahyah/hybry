@@ -1,8 +1,31 @@
+.container.nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+
+.navbg {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 0.8em;
+  border-radius: 0.4em;
+}
+
 .nav__bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  /* margin-top: 15px;s */
+  position: relative;
+}
+
+.nav__bar .menu {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 0px 100px var(--primary), 0px 0px 100px var(--accents);
+  display: none;
 }
 
 .nav__bar .site__title {
@@ -12,4 +35,31 @@
 .nav__bar ul li {
   display: inline;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__bar .menu {
+    display: block;
+  }
+
+  .nav__bar ul {
+    display: none;
+  }
+
+  .nav__bar ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    background-color: var(--accents);
+    border-radius: var(--width);
+    padding: 10px;
+    box-shadow: 0px 0px 10000px var(--primary);
+  }
+
+  .nav__bar ul li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }

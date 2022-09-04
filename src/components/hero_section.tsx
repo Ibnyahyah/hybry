@@ -1,4 +1,5 @@
 import React from "react";
+import Seacrh from "./seacrh";
 
 function HeroSection() {
   return (
@@ -8,10 +9,7 @@ function HeroSection() {
           <h2>
             <span>Hedera</span> Explore
           </h2>
-          <form action="">
-            <input type="text" placeholder="Seacrh" />
-            <button>Seacrh</button>
-          </form>
+          <Seacrh placeholder="Search for accounts, blocks, transactions" />
         </div>
       </div>
     </div>

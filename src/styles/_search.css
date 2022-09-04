@@ -1,0 +1,40 @@
+.search__container form {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--primary);
+    height: 40px;
+    border-radius: var(--width);
+    margin-top: 40px;
+    width: 100%;
+}
+
+.search__container input[type="text"] {
+    flex: 4.3;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 0px var(--padding);
+    color: #fff;
+    outline: none;
+}
+
+.search__container form button {
+    flex: 0.7;
+    height: 100%;
+    border-radius: var(--width);
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .search__container form input[type="text"] {
+        flex: 4;
+    }
+
+    .search__container form button {
+        flex: 1;
+    }
+}

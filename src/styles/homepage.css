@@ -13,36 +13,6 @@
   color: var(--secondary);
 }
 
-
-.home_page .header form {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--primary);
-  height: 40px;
-  border-radius: var(--width);
-  margin-top: 40px;
-  width: 100%;
-}
-
-.home_page .header form input[type="text"] {
-  flex: 4.3;
-  height: 100%;
-  border: none;
-  background-color: transparent;
-  padding: 0px var(--padding);
-  color: #fff;
-  outline: none;
-}
-
-.home_page .header form button {
-  flex: 0.7;
-  height: 100%;
-  border-radius: var(--width);
-  background-color: var(--secondary);
-  color: var(--primary);
-  border: none;
-}
-
 .home_page .overview__flow {
   margin-top: 100px;
   display: flex;
@@ -182,14 +152,6 @@
   .home_page .header {
     margin-top: 70px;
     width: 100%;
-  }
-
-  .home_page .header form input[type="text"] {
-    flex: 4;
-  }
-
-  .home_page .header form button {
-    flex: 1;
   }
 
   .transaction__blocks {

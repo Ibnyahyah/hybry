@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
+import AccountPage from "./pages/accounts_page";
 
 import BlockPage from "./pages/blocks_page";
 import HomePage from "./pages/home_page";
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/block/:id" element={<BlockPage />} />
         <Route path="/transaction/:id" element={<TransactionPage />} />
+        <Route path="/account/:id" element={<AccountPage />} />
       </Routes>
       <Footer />
     </>

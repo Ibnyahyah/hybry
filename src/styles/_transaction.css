@@ -6,11 +6,21 @@
 .transaction__page h1 {
   font-weight: 600;
   font-size: 30px;
-  margin-bottom: 30px;
 }
 
 .transaction__page h2 {
   font-weight: 500;
+}
+
+.transaction__page .row {
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  margin-bottom: 30px;
+  row-gap: 20px;
+}
+
+.transaction__page .search__wrapper {
+  width: 50%;
 }
 
 .transaction__page .___header span {
@@ -78,4 +88,43 @@
 .transaction__page .transactions__transfer .approved__transfer.false {
   color: red;
   margin-left: 10px;
+}
+
+/* block__details account */
+.block__details.account .accout__transaction__table__container {
+  width: 800vw;
+}
+
+.block__details.account tr {
+  align-items: center;
+}
+
+.block__details.account tr th {
+  text-align: left;
+  padding: 10px 5px;
+  background-color: var(--accents);
+  color: var(--primary);
+  border-radius: var(--width);
+}
+
+.block__details.account tr td {
+  padding-top: -210px;
+  padding-bottom: -210px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: var(--width);
+  border-bottom: 1px solid #000;
+  background-color: lightgray;
+}
+
+.block__details.account td:nth-child(1),
+.block__details.account td:nth-child(2) {
+  color: var(--secondary);
+}
+
+@media screen and (max-width: 768px) {
+
+  .transaction__page .search__wrapper {
+    width: 96%;
+  }
 }
