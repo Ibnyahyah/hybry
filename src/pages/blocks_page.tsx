@@ -9,16 +9,16 @@ function BlocksPage(): JSX.Element {
 
   const [limit, setLimit] = React.useState<number>(10000);
 
-  React.useEffect(() => {
-    const element = document.querySelector(".transaction__block");
-    window?.addEventListener("scroll", () => {
-      if (element?.scrollTop === 0) {
-        setLimit(100);
-      } else {
-        setLimit(100 * 100);
-      }
-    });
-  }, [limit]);
+  // React.useEffect(() => {
+  //   const element = document.querySelector(".transaction__block");
+  //   window?.addEventListener("scroll", () => {
+  //     if (element?.scrollTop === 0) {
+  //       setLimit(100);
+  //     } else {
+  //       setLimit(100 * 100);
+  //     }
+  //   });
+  // }, [limit]);
 
   const getAvailableBlocks = async () => {
     setLoading(true);
@@ -73,13 +73,13 @@ function BlocksPage(): JSX.Element {
                 </div>
                 <p>Count: {data["count"]}</p>
               </div>
-              <p className="transfer">
+              <div className="transfer">
                 Timestamp:
                 <p>
                   From: {(data["timestamp"]["from"] as string).split(".")[0]}
                 </p>
                 <p>To: {(data["timestamp"]["to"] as string).split(".")[0]}</p>
-              </p>
+              </div>
             </div>
           ))}
         </div>

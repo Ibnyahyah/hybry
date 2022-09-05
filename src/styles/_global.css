@@ -29,6 +29,27 @@ li {
   list-style: none;
 }
 
+.not__found__container {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.contentHeader {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.contentParagraph {
+  margin-top: 30px;
+}
 
 /* loading__container */
 .loading__container {
@@ -58,5 +79,16 @@ li {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contentHeader {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .contentParagraph {
+    margin-top: 10px;
   }
 }

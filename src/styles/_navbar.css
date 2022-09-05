@@ -6,12 +6,18 @@
 
 .navbg {
   background-color: var(--primary);
-  padding: 0.8em;
+  padding: 0.2em 0.8em;
   border-radius: 0.4em;
 }
 
 .navbg a {
   color: var(--secondary);
+}
+
+.navbg .menu {
+  box-shadow: 0px 0px 1000px gray;
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 
 .nav__bar {
@@ -30,11 +36,22 @@
   display: none;
 }
 
-.nav__bar .site__title {
-  font-size: 24px;
-  font-weight: 600;
-  font-family: monospace;
+.nav__bar .menu img {
+  width: 30px;
 }
+
+.nav__bar .site__title {
+  width: 50px;
+  height: 50px;
+}
+
+.nav__bar .site__title img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
 
 .nav__bar ul li {
   display: inline;
@@ -65,5 +82,9 @@
   .nav__bar ul li {
     margin-left: 0;
     margin-top: 10px;
+  }
+
+  .navbg ul a {
+    color: white;
   }
 }

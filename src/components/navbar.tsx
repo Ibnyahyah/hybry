@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import HYBRYLOGO from "../assets/hybry-foundation-04.png";
+import MENUICON from "../assets/icons/menu_icon.png";
+import CLOSEICON from "../assets/icons/close_icon.png";
 
 function Navbar() {
+  const location = useLocation();
+  const path = location.pathname.split("/#/")[0];
   const [menu, setMenu] = React.useState<boolean>(false);
   const [bg, setBg] = React.useState<string>("");
 
@@ -16,15 +21,26 @@ function Navbar() {
         setBg("");
       }
     });
-  });
+  }, [bg, setBg]);
+
+  React.useEffect(() => {
+    setMenu(false);
+  }, [path]);
+
   return (
     <div className={`container nav ${bg}`}>
       <nav className="nav__bar">
         <Link to="/">
-          <header className="site__title">HyBryFoundation</header>
+          <header className="site__title">
+            <img src={HYBRYLOGO} alt="" />
+          </header>
         </Link>
-        <button className="menu" onClick={() => setMenu((prev) => !prev)}>
-          |||
+        <button
+          className="menu"
+          onClick={() => setMenu((prev) => !prev)}
+          title="open menus"
+        >
+          <img src={menu ? CLOSEICON : MENUICON} alt="" />
         </button>
         <ul className={menu ? "active" : ""}>
           <li>

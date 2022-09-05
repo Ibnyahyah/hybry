@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import NotFoundPage from "./components/404_page";
 
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
@@ -27,6 +28,7 @@ function App() {
         <Route path="/transaction/:id" element={<TransactionPage />} />
         <Route path="/account/:id" element={<AccountPage />} />
         <Route path="/contract/:id" element={<ContractPage />} />
+        <Route path="/404-error-page/:id" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </>

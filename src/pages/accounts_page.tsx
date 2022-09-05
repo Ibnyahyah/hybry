@@ -10,16 +10,16 @@ function AccountsPage(): JSX.Element {
 
   const [limit, setLimit] = React.useState<number>(10000);
 
-  React.useEffect(() => {
-    const element = document.querySelector(".transaction__block");
-    window?.addEventListener("scroll", () => {
-      if (element?.scrollTop === 0) {
-        setLimit(100);
-      } else {
-        setLimit(100 * 100);
-      }
-    });
-  }, [limit]);
+  // React.useEffect(() => {
+  //   const element = document.querySelector(".transaction__block");
+  //   window?.addEventListener("scroll", () => {
+  //     if (element?.scrollTop === 0) {
+  //       setLimit(100);
+  //     } else {
+  //       setLimit(100 * 100);
+  //     }
+  //   });
+  // }, [limit]);
 
   const getAvailableAccounts = async () => {
     setLoading(true);

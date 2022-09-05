@@ -70,6 +70,7 @@
 .card__footer p:first-child {
   font-size: 25px;
   font-weight: 500;
+  color: var(--accents);
 }
 
 .card__footer p:last-child {

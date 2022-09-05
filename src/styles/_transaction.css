@@ -12,6 +12,10 @@
   font-weight: 500;
 }
 
+.transaction__page table a {
+  color: var(--secondary);
+}
+
 .transaction__page .row {
   align-items: center;
   flex-wrap: wrap-reverse;

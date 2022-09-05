@@ -31,11 +31,11 @@ function Blocks({ blocks }: Props) {
               </div>
               <p>Count: {data["count"]}</p>
             </div>
-            <p className="transfer">
+            <div className="transfer">
               Timestamp:
               <p>From: {(data["timestamp"]["from"] as string).split(".")[0]}</p>
               <p>To: {(data["timestamp"]["to"] as string).split(".")[0]}</p>
-            </p>
+            </div>
           </div>
         ))}
       </div>
